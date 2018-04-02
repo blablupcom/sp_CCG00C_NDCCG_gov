@@ -104,9 +104,9 @@ for title_div in title_divs:
     block = title_div.find('a')
     url = block['href']
     title = block.text.strip()
-    print title
-    # csvMth = title[:3]
-    # csvYr = title.strip()[-4:]
+    csvMth = title.split()[-1][:3]
+    csvYr = title.strip()[:4]
+    print csvYr, csvMth
     # csvMth = convert_mth_strings(csvMth.upper())
     # data.append([csvYr, csvMth, url])
 
