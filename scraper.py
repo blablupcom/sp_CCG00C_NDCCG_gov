@@ -104,10 +104,11 @@ for title_div in title_divs:
     block = title_div.find('a')
     url = block['href']
     title = block.text.strip()
-    csvMth = title[:3]
-    csvYr = title.strip()[-4:]
-    csvMth = convert_mth_strings(csvMth.upper())
-    data.append([csvYr, csvMth, url])
+    print title
+    # csvMth = title[:3]
+    # csvYr = title.strip()[-4:]
+    # csvMth = convert_mth_strings(csvMth.upper())
+    # data.append([csvYr, csvMth, url])
 
 #### STORE DATA 1.0
 
