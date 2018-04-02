@@ -106,8 +106,11 @@ for title_div in title_divs:
     title = block.text.strip()
     csvMth = title.split()[-1][:3]
     csvYr = title.strip()[:4]
+    if '201' in csvMth or '2018' in csvYr:
+        csvMth = title.split()[-2][:3]
     print csvYr, csvMth
-    # csvMth = convert_mth_strings(csvMth.upper())
+
+        # csvMth = convert_mth_strings(csvMth.upper())
     # data.append([csvYr, csvMth, url])
 
 #### STORE DATA 1.0
